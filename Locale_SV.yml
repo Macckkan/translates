@@ -1178,13 +1178,13 @@ command:
       list: '&e[place]. &f[command] &7[args]'
       hover: '&e[desc]'
       variableColor: '&f'
-      noCommandFound: '&7No commands found by this keyword'
+      noCommandFound: '&7Inga kommandon hittades med det nyckelordet'
   checkexp:
     help:
       info: '&eKolla en spelares exp'
       args: (playerName)
     info:
-      current: '&eLevel: &6[currentLevel] &eExp: &6[levelExp] &eTotal exp: &6[exp]'
+      current: '&eNivå: &6[currentLevel] &eExp: &6[levelExp] &eTotal exp: &6[exp]'
       need: '&eBehövd exp till nästa level: &6[missingExp]'
   checkperm:
     help:
@@ -1259,16 +1259,16 @@ command:
       None: '&e-'
   colorpicker:
     help:
-      info: '&ePick hex color'
+      info: '&eVälj hex färg'
       args: (hex/colorname)
     info:
       hovers:
       - '[color]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
       - '&f#[hex]'
-      - '&7Closest match: '
+      - '&7Närmsta träff: '
       - '[colorHex] - [colorName]'
       - '[closeColor]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
-      - Shift+Click
+      - Shift+Klick
   colors:
     help:
       info: '&eVisar alla tillgängliga färger'
@@ -1278,9 +1278,9 @@ command:
       - '&e***************************************'
       - '     &0&%0  &1&%1  &2&%2  &3&%3  &4&%4  &5&%5  &6&%6  &7&%7'
       - '     &8&%8  &9&%9  &a&%a  &b&%b  &c&%c  &d&%d  &e&%e  &f&%f'
-      - '       &%k - &kMagic&r      &%l - &lBold'
-      - '       &%m - &mStrike&r     &%n - &nUline'
-      - '       &%o - &oItalic&r      &%r - &rReset'
+      - '       &%k - &kMagisk&r      &%l - &lFet'
+      - '       &%m - &mGenomstruken&r     &%n - &nUnderstruken'
+      - '       &%o - &oKursiv&r      &%r - &rÅterställ'
       - '&e***************************************'
   commandspy:
     help:
@@ -1344,7 +1344,7 @@ command:
       args: (playerName)
     info:
       moreDetails: '&7Klicka här för mer detaljer'
-      title: '&8[playerDisplayName] &7speltid'
+      title: '&8[playerDisplayName]s &7speltid'
       date: '&8[date]'
       time: '&7[hour]:00&f-&7[nextHour]:00'
       thishour: '&7Nuvarande timme'
@@ -1360,7 +1360,7 @@ command:
       total: '&7Totalt'
   ctellraw:
     help:
-      info: '&eSkicka tellraw typ meddelande'
+      info: '&eSkicka tellraw meddelande'
       args: '[playerName/all] [formattedMessage]'
       explanation:
       - Användning är samma som visas i http://www.zrips.net/cmi/custom-text/ aka
@@ -1529,15 +1529,15 @@ command:
     info:
       exists: '&cWarpen med detta namn (&7[newName]&c) finns redan. Välj ett annat.'
       updated: '&eUppdaterade namn från &7[oldName]&e till &7[newName]'
-      placeItem: '&2Placera ett föremål för att sätta specialikon'
-      placeOffItem: '&2Placera föremål för att sätta speciell avikon'
-      autoLore: '&2Auto lore generering: [state]'
-      group: '&2Group: &7[group]'
-      newGroup: '&eEnter new group name'
+      placeItem: '&2Placera ett föremål för att sätta en specialikon'
+      placeOffItem: '&2Placera föremål för att sätta en speciell avikon'
+      autoLore: '&2Automatisk lore generering: [state]'
+      group: '&2Grupp: &7[group]'
+      newGroup: '&eSkriv in nytt gruppnamn'
       randomizeYaw: '&2Randomisera håll: [state]'
       permission: '&2Kräver tillstånd för att använda: [state]'
-      reqPermission: '&2Show without permission: [state]'
-      hidden: '&2Hidden: [state]'
+      reqPermission: '&2Visa utan tillstånd: [state]'
+      hidden: '&2Gömd: [state]'
       location: '&2Sätt ny plats'
       slot: '&2Plats: &6[slot]'
       page: '&2Sida: &6[page]'
@@ -1613,19 +1613,19 @@ command:
       lastDamage: '&eSenaste skade anledning: &6[cause]'
       tamed: '&eTam: &6[state]'
       owner: '&eÄgare: &6[playerDisplayName]'
-      grows: '&eGrows up in: &6[time]'
-      horse: '&eHorse: &6[jump]&eblocks &6[speed]&eblocks/sec'
-      villager: '&eProfession: &7[profession] &eLvl: &7[lvl] &eType: &7[type]'
+      grows: '&eVäxer upp om: &6[time]'
+      horse: '&eHäst: &6[jump]&eblocks &6[speed]&eblocks/sec'
+      villager: '&eYrke: &7[profession] &eLvl: &7[lvl] &eType: &7[type]'
   entitynbt:
     help:
-      info: '&eKolla entitet nbt information'
+      info: '&eKolla entitetens nbt information'
       args: ''
   exp:
     help:
       info: '&eSätt spelares exp. Använd L för att sätta nivåer'
       args: '[playerName] [add/set/take/clear] [amount]'
       explanation:
-      - 'Example:'
+      - 'Exempel:'
       - /exp 10
       - /exp add 10
       - /exp set 10L
@@ -1634,23 +1634,23 @@ command:
       - /exp Zrips add 10
     info:
       current: '&e[playerDisplayName] &eär på nivå &6[lvl] &emed &6[currentExp] &eexp
-        eller med totalt exp &6[exp]&e.'
+        eller med totalt &6[exp]&e exp.'
       selfFeedback: '&eExp ändrades till &3[exp] &eför &3[playerDisplayName]&e (&3[offon]&e).'
       targetFeedback: '&eDin exp ändrades till &3[exp]&e av &3[senderDisplayName]&e.'
   ext:
     help:
-      info: '&eExtinguish a player'
+      info: '&eSläck en spelare'
       args: (playerName) (-s)
     info:
-      feedback: '&eYou have extinguished &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&eYou have been extinguished by &3[senderDisplayName]&e.'
+      feedback: '&eDu har släckt &3[playerDisplayName]&e (&3[offon]&e).'
+      targetfeedback: '&eDu har blivit släckt av &3[senderDisplayName]&e.'
   feed:
     help:
       info: '&eMata spelare'
       args: (playerName/all) (-s)
     info:
       feedback: '&eDu har matat &3[playerDisplayName]&e (&3[offon]&e).'
-      feedbackMulti: '&eYou have fed &3[count] &eplayers.'
+      feedbackMulti: '&eDu har matat &3[count] &espelare.'
       targetfeedback: '&eDu har blivit matad av &3[senderDisplayName]&e.'
   findbiome:
     help:
@@ -1659,23 +1659,23 @@ command:
     info:
       infoShow: '&6TPS: &3[tps] &6Kvar &e[left] &6(&e[time]&6) &6Hastighet: &e[speed]'
       stopped: '&eStoppad!'
-      cantFindBiome: '&eKunde inte hitta biomen du ville. Kollade &6[amount] &echunker'
+      cantFindBiome: '&eKunde inte hitta biomen du ville. Sökte igenom totalt &6[amount] &echunker'
       teleportedTo: '&eTeleporterade till &6[biome] &ebiomen'
   fixchunk:
     help:
       info: '&eSök efter skadade chunker'
       args: '&ew &6[worldName]&e r &6[range in chunks]&e c &6[x:z]&e '
       explanation:
-      - '&6SubCommands:'
-      - '- &6stats &e- show current scanning stats'
-      - '- &6pause &e- pause scaning'
-      - '- &6continue &e- continue scaning'
-      - '- &6stop &e- stop scaning'
-      - '- &6stopall &e- stop all scanings'
-      - '- &6speed [amount] &e- set current scan speed'
-      - '- &6autospeed [true/false] &e- set autospeed turned off or on'
-      - '- &6messages [true/false] &e- set message output to off or on'
-      - 'Example:'
+      - '&6UnderKommandon:'
+      - '- &6stats &e- visar nuvarande genomsökning status'
+      - '- &6pause &e- pausa genomsökning'
+      - '- &6continue &e- återuppta genomsökning'
+      - '- &6stop &e- stoppa genomsökning'
+      - '- &6stopall &e- stoppa alla genomsökningar'
+      - '- &6speed [amount] &e- ange nuvarande genomsöknings hastighet'
+      - '- &6autospeed [true/false] &e- ange om automatisk hastighet ska vara på eller av'
+      - '- &6messages [true/false] &e- ange om meddelanden ska vara på eller av'
+      - 'Exempel:'
       - /fixchunk w LT_Craft
       - /fixchunk w LT_Craft r 50 c 1024:-2048
       - /fixchunk w LT_Craft r g
@@ -1720,10 +1720,10 @@ command:
       buttonMoney: '&6Fyll på med pengar'
       max: '&6Du har full flygtid!'
       lore:
-      - '&eLeft click +1. Cost: &7[amount1]'
-      - '&6Shift left click +10. Cost: &7[amount10]'
-      - '&eRight click +100. Cost: &7[amount100]'
-      - '&6Shift right click +1000. Cost: &7[amount1000]'
+      - '&eVänsterklick +1. Kostnad: &7[amount1]'
+      - '&6Shift vänsterklick +10. Kostnad: &7[amount10]'
+      - '&eHögerklick +100. Kostnad: &7[amount100]'
+      - '&6Shift högerklick +1000. Kostnad: &7[amount1000]'
       - ''
       changeAmount: '&e([amount]&e)'
   fly:
@@ -1770,8 +1770,8 @@ command:
       info: '&eGe föremål till spelare'
       args: (playerName) [itemname] (amount)
       explanation:
-      - Name and lore supports placeholders
-      - 'Example: /give stone'
+      - Namn och lore stöder placeholders
+      - 'Exempel: /give stone'
       - /give Zrips stone 5 n Stonehenge
       - /give stick e knockback:1
       - /give Zrips sponge l Got_item_on:_%date/YY/MM/dd-HH:mm:ss%
@@ -1792,15 +1792,15 @@ command:
       info: '&eGe föremål till alla spelare'
       args: '[itemname] (amount) (e|l|n|offline)'
       explanation:
-      - '&e- give item name or its id with data value'
-      - '&e- optionaly provide amount you want to give '
-      - '&e- &6n &e- to define itemname '
-      - '&e- &6l &e- to define item lore '
-      - '&e- &6e &e - to define item enchants '
-      - '&e- &6-s &e - wont show feedback message '
-      - '&e- &6h &e - followed with player name will give item from its hand '
-      - '&e- &6inv &e - followed by player name will give entire inventory for others '
-      - '&e- &6offline &e- to include offline players'
+      - '&e- ge föremålsnamn eller dess id med data värde'
+      - '&e- (frivilligt) ange antal föremål du vill ge '
+      - '&e- &6n &e- för att definera namn '
+      - '&e- &6l &e- för att definera lore '
+      - '&e- &6e &e - för att definera förtrollningar '
+      - '&e- &6-s &e - kommer inte ge respons meddelande '
+      - '&e- &6h &e - följt av spelarnamn ger föremålet från handen '
+      - '&e- &6inv &e - följt av spelarnamn kommer ge hela förrådet till alla spelare '
+      - '&e- &6offline &e- för att inkludera offline spelare'
       - '&ecmi giveall stone 1 n &2Uber_stone l &3Stone_lore offline'
       - '&ecmi giveall h Zrips'
       - '&ecmi giveall inv Zrips'
@@ -1813,14 +1813,14 @@ command:
       info: '&eAktiverar en spelares glödläge'
       args: (playerName) [true/false/color/gui]
       explanation:
-      - 'Example: /glow Zrips red'
-      - 'Permissions: cmi.command.glow.[color] - allows to set particular glow color'
+      - 'Exempel: /glow Zrips red'
+      - 'Tillstånd: cmi.command.glow.[color] - tillåter att välja glödfärg'
     info:
       feedback: '&eDu har ändrat [color]glöd &etill &3[boolean]&e för &3[playerDisplayName]&e
         (&3[offon]&e).'
       targetfeedback: '&eDitt [color]glöd &eläge ändrades till &3[boolean]&e av &3[senderDisplayName]&e.'
       title: Välj glöd färg
-      incorrect: '&4Incorrect color name'
+      incorrect: '&4Ogiltig färg'
   gm:
     help:
       info: '&eÄndra spelares spelläge'
@@ -1828,64 +1828,64 @@ command:
     info:
       feedback: '&eDu har ändrat &3[playerDisplayName]&e (&3[offon]&e) till spelläge
         &3[gameMode]&e.'
-      targetfeedback: '&eDitt spellägeYour game mode was set to &3[gameMode]&e by
+      targetfeedback: '&eDitt spelläge ändrades till &3[gameMode]&e av
         &3[senderDisplayName]&e.'
   god:
     help:
-      info: '&eSet players god mode to true or false'
+      info: '&eÄndra spelarens gudläge till sant eller falskt'
       args: '[playerName] (true/false) (-s)'
     info:
-      feedback: '&eYou have set god to &3[boolean]&e for &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&eYour god mode was set to &3[boolean]&e by &3[senderDisplayName]&e.'
+      feedback: '&eDu har ändrat gudläget för &3[playerDisplayName]&e till &3[boolean]&e (&3[offon]&e).'
+      targetfeedback: '&eDitt gudläge ändrades till &3[boolean]&e av &3[senderDisplayName]&e.'
   groundclean:
     help:
-      info: '&eClears server from unnecessary items'
+      info: '&eRensar servern på onödiga föremål'
       args: (+cb) (+cm) (+ci) (+b) (+tnt) (-w:[worldName])
       explanation:
-      - +cm will include minecarts into cleaning
-      - +cb will include boats into cleaning
-      - +ci defines if you want to include weapons and armors
-      - +tnt defines if you want to include primed tnt
-      - +b broadcasts clear message to everyone
+      - +cm kommer inkludera minecarts i rensningen
+      - +cb kommer inkludera båtar i rensningen
+      - +ci definerar om du vill inkludera vapen och rustningar
+      - +tnt definerar om du vill inkludera primad tnt
+      - +b sänder ut ett meddelande om rensningen till alla
     info:
-      removed: '&eRemoved -[list]'
-      items: ' &eItems: &6[items]'
-      arrows: ' &eArrows: &6[arrows]'
-      exporbs: ' &eExpOrbs: &6[exporbs]'
-      blocks: ' &eFallingBlocks: &6[blocks]'
-      projectiles: ' &eProjectiles: &6[projectiles]'
-      tnt: ' &ePrimedTnt: &6[tnt]'
-      boat: ' &eBoats: &6[boat]'
+      removed: '&eTog bort -[list]'
+      items: ' &eFöremål: &6[items]'
+      arrows: ' &ePilar: &6[arrows]'
+      exporbs: ' &eExpKlot: &6[exporbs]'
+      blocks: ' &eFallande Blocks: &6[blocks]'
+      projectiles: ' &eProjektiler: &6[projectiles]'
+      tnt: ' &ePrimad Tnt: &6[tnt]'
+      boat: ' &eBåtar: &6[boat]'
       minecart: ' &eMinecarts: &6[minecart]'
-      nothing: '&eNothing to remove.'
+      nothing: '&eDet fanns inget att ta bort.'
   haspermission:
     help:
-      info: '&eCheck if player has particular permission'
+      info: '&eKolla om en spelare har ett speciellt tillstånd'
       args: (playerName) [permissionNode]
     info:
       title: '&6[playerDisplayName] &e-> &6[permission]'
-      none: '&ePermission is not set for player and he is not OP. Results to &6[state]'
-      softSet: '&eSet by plugin.yml to &6[state]'
-      hardSet: '&eHard set to &6[state] &eby some plugin'
-      notHardSet: '&eNot hard set, can result to &cFalse &ein some cases'
-      ops: '&eResults to &6[state] &ebecause player is OP'
+      none: '&eSpelaren har inte tillståndet och är inte OP. Resulterar i &6[state]'
+      softSet: '&eBestämd av plugin.yml till &6[state]'
+      hardSet: '&ePåtvingad till &6[state] &eav något plugin'
+      notHardSet: '&eInte påtvingad, kan resultera i &cFalskt &ei vissa lägen'
+      ops: '&eResulterar i &6[state] &epå grund av att spelaren är OP'
   hat:
     help:
-      info: '&ePlace item like hat'
+      info: '&ePlacera föremålet på huvudet som en hatt'
       args: (playerName)
     info:
-      feedback: '&6You have successfully changed hat!'
-      targetfeedback: '&6Your hat was changed by &3[senderDisplayName]&6!'
-      fullinv: '&3[playerDisplayName] &6inventory is full, can''t change hat!'
-      incorrect: '&3Incorrect item in head slot, cant replace with new one. Remove
-        it manually'
+      feedback: '&6Du har lyckats byta hatt!'
+      targetfeedback: '&6Din hatt byta av &3[senderDisplayName]&6!'
+      fullinv: '&3[playerDisplayName] &6förrådet är fullt, det går inte att byta hatt!'
+      incorrect: '&3Ogiltigt föremål i huvud rutan, kan inte bytas ut med det nya. Ta bort
+        det manuellt'
   head:
     help:
-      info: '&eFå spelares huvud'
+      info: '&eFå en spelares huvud'
       args: '[sourceName] (targetName) (-s)'
     info:
-      Feedback: '&3[headName] &6huvud skapat!'
-      targetFeedback: '&eDu fick &3[headName] &ehuvud från &3[senderDisplayName]&e!'
+      Feedback: '&3[headName] &6huvudet skapades!'
+      targetFeedback: '&eDu fick ett &3[headName] &ehuvud från &3[senderDisplayName]&e!'
   heal:
     help:
       info: '&eHela spelare'
@@ -1896,88 +1896,88 @@ command:
       targetfeedback: '&eDu har blivit helad av &3[senderDisplayName]&e.'
   helpop:
     help:
-      info: '&eSends message for help to staff members'
+      info: '&eSkickar ut ett meddelande om hjälp till staff medlemmar'
       args: '[message]'
       explanation:
-      - Requires cmi.command.helpop.inform too see messages
+      - Kräver cmi.command.helpop.inform för att se meddelanden
     info:
-      message: '&c[Help]&4[&7[senderDisplayName]&4]&r&c [message]'
-      feedback: '&c[Help]&7Your question was submitted to online staff'
-      offline: '&c[Help]&7There are no staff members currently online, try later'
+      message: '&c[Hjälp]&4[&7[senderDisplayName]&4]&r&c [message]'
+      feedback: '&c[Hjälp]&7Din fråga skickades till alla online staff'
+      offline: '&c[Hjälp]&7Ingen staff är online för tillfället. Försök igen senare eller skapa en ticket på discord'
   hideflags:
     help:
-      info: '&eHides item flags'
+      info: '&eGömmer föremåls flaggor'
       args: (playerName) [flagName/clear]
     info:
-      feedback: '&eYou have added new flag to item for &3[playerDisplayName]&e (&3[offon]&e).'
-      cleared: '&eCleared &3ALL &eflags from item for &3[playerDisplayName]&e (&3[offon]&e).'
-      noitem: '&cNot holding any item in hand.'
-      inccorectId: '&eIncorrect flag name.'
+      feedback: '&eDu har lagt till en ny flagga på ett av &3[playerDisplayName]&e (&3[offon]&e) föremål.'
+      cleared: '&eTog bort &3ALLA &eflaggor från &3[playerDisplayName]&e (&3[offon]&e) föremål.'
+      noitem: '&cMålet håller inte i något föremål.'
+      inccorectId: '&eOgiltigt flaggnamn.'
   hologram:
     help:
-      info: '&eCreate holograms'
+      info: '&eSkapa hologram'
       args: ''
     info:
-      howTo: '&cTo create new hologram perform &e/cmi hologram new &6[name]'
-      gui: '&7---- &f<Open settings gui> &7----'
-      guiHover: '&7Open hologram settings GUI'
-      interval: '&7Update every &6[second] &7seconds'
+      howTo: '&cFör att skapa ett nytt hologram utför &e/cmi hologram new &6[name]'
+      gui: '&7---- &f<Öppna inställnings gui> &7----'
+      guiHover: '&7Öppna hologram inställnings GUI'
+      interval: '&7Uppdatera varje &6[second] &7sekunder'
       intervalLore:
-      - '&7How often, in seconds, information on the hologram is updated'
-      - '&7If text is not changing, set it to -1'
-      pageInterval: '&7Change page every &6[second] &7seconds'
+      - '&7Hur ofta i sekunder som informationen i hologrammet ska uppdateras'
+      - '&7Om texten inte ändras, ange -1'
+      pageInterval: '&7Byt sida varje &6[second] &7sekunder'
       pageIntervalLore:
-      - '&7How often, in seconds, hologram page is changed automatically'
-      pageIntervalNoPages: '&4This hologram doesn''t have any pages yet'
-      text: '&7Spacing for text &6[space]'
-      usync: '&7Text change in sync: &6[state]'
-      reqPermission: '&7Requires permission to see: &6[state]'
-      teleport: '&7Teleport to hologram location'
-      icon: '&7Spacing for icons &6[space]'
+      - '&7Hur ofta i sekunder som hologrammets sida ändras automatiskt'
+      pageIntervalNoPages: '&4Detta hologram har inga andra sidor än'
+      text: '&7Mellanrum för text &6[space]'
+      usync: '&7Synka textändring: &6[state]'
+      reqPermission: '&7Kräver tillstånd att se: &6[state]'
+      teleport: '&7Teleportera till hologrammets plats'
+      icon: '&7Mellanrum för ikoner &6[space]'
       iconLore:
-      - '&7Defines distance between objects'
-      range: '&7Show range: &6[blocks]'
+      - '&7Definerar distansen mellan objekt'
+      range: '&7Visnings distans: &6[blocks]'
       rangeLore:
-      - '&7Defines area around hologram to show or hide it'
-      updateRange: '&7Update range: &6[blocks]'
+      - '&7Definera arean runt hologrammet för att visa eller gömma det'
+      updateRange: '&7Uppdaterings distans: &6[blocks]'
       updateRangeLore:
-      - '&7Defines area around hologram to trigger update'
-      relocate: '&7Relocate'
+      - '&7Definera arean runt hologrammet för att påtvinga uppdatering'
+      relocate: '&7Förflytta'
       relocateLore:
-      - '&7Relocates hologram to your current location'
-      los: '&7Consider line of sight: &6[state]'
+      - '&7Förflyttar hologrammet till din nuvarande position'
+      los: '&7Aktivera synlighets distans: &6[state]'
       losLore:
-      - '&7Check interval: [interval]'
-      interact: '&7Interactable: &6[state]'
-      commands: '&7Commands:'
-      particles: '&7Show particles: &6[state]'
-      big: '&7Big button: &6[state]'
+      - '&7Kontroll interval: [interval]'
+      interact: '&7Interaktiv: &6[state]'
+      commands: '&7Kommandon:'
+      particles: '&7Visa partiklar: &6[state]'
+      big: '&7Stor knapp: &6[state]'
       bigLore:
-      - '&7Keep in mind that big button mode'
-      - '&7Will prevent you from moving past it'
-      order: '&7Downwards placement: &6[state]'
-      autoButton: '&7Automatically generate pagination buttons'
+      - '&7Tänk op att "Stor knapp" läget'
+      - '&7Kommer hindra dig från att förflytta dig förbi det'
+      order: '&7Flytta nedåt: &6[state]'
+      autoButton: '&7Generera sidknappar automatiskt'
       autoButtonLore:
-      - '&eCurrent hologram doesnt have any pages create'
-      - '&eUse &6!nextpage! &eas a new line to make next page'
-      autoButtonForward: '&2This hologram already has forwards button created'
-      autoButtonBackward: '&2This hologram already has backwards button created'
+      - '&eNuvarande hologram har inga skapade sidor'
+      - '&eAnvänd &6!nextpage! &esom ny rad för att skapa nästa sida'
+      autoButtonForward: '&2Detta hologram har redan en framåt knapp skapad'
+      autoButtonBackward: '&2Detta hologram har redan en bakåt knapp skapad'
       moveX: '&7X:&e[x]'
       moveY: '&7Y:&e[y]'
       moveZ: '&7Z:&e[z]'
       shift:
-      - '&eChange by 0.01 or hold shift to change by 0.1'
+      - '&eÄndra med 0.01 eller håll inne shift för att ändra med 0.1'
       list: '&6[place]&e. [name]'
-      addInfo: '&eEnter new line text. Type &6cancel &eto cancel. Extra variables:
+      addInfo: '&eAnge text för ny rad. Skriv &6cancel &eför att avbryta. Extra variabler:
         &6ICON:&7[Value] &6SICON:&7[Value]&e where &7Value&e- &7[MaterialName-amount]%enchanted%&e,
         &7%itemInHand%&e, &7Head:[headOwner]'
   hologrampages:
     help:
-      info: '&eChange hologram page'
+      info: '&eByt hologram sida'
       args: '[holoName] (playerName) (next/prev/[pageNumber])'
   home:
     help:
-      info: '&eTeleportera till en hemplats'
+      info: '&eTeleportera till ett hem'
       args: (homeName) (playerName) (whoTeleport)
     info:
       list: '&eHem: &6'
@@ -1988,68 +1988,68 @@ command:
       noHomes: '&cDu har inga sparade hem'
       private: '&cDenna hemplats är privat!'
       remove: '&cShift+Högerklick för att ta bort hemmet'
-      guiTitle: '&0[playerDisplayName] &8homes [current]/[max]'
+      guiTitle: '&0[playerDisplayName] &8hem [current]/[max]'
   homes:
     help:
-      info: '&eEn lista av hem du kan teleportera till.'
+      info: '&eEn lista på hem du kan teleportera till.'
       args: (playerName)
     info:
       nearList: '&7[number]. &e[playerDisplayName] &6[homeName] &7[distance] blocks
-        away &e[direction]'
+        bort &e[direction]'
   hunger:
     help:
-      info: '&eSet players hunger'
+      info: '&eAnge en spelares hunger'
       args: '[playerName] [amount] (-s)'
     info:
-      feedback: '&eYou have set &3[hunger]&e hunger for &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&eYour hunger was set to &3[hunger]&e by &3[senderDisplayName]&e.'
+      feedback: '&eDu har ändrat till &3[hunger]&e hunger för &3[playerDisplayName]&e (&3[offon]&e).'
+      targetfeedback: '&eDin hunger ändrades till &3[hunger]&e av &3[senderDisplayName]&e.'
   ic:
     help:
-      info: '&eCreate interactive command'
+      info: '&eSkapa interaktiva kommandon'
       args: (new) (name)
     info:
       titleC: ' &e--- &6[name] '
       titleB: '&e[type] &e---'
-      public: ' &2[Public]'
-      notPublic: ' &7[NotPublic]'
-      reqPerm: ' &2[ReqPerm]'
-      noPerm: ' &7[ReqPerm]'
-      permHover: ' &eRequires &7[permission] &epermission to place this sign'
-      editSign: ' &e[EditSignLines]'
-      publicHover: "&eChange public status. \nSigns top line &7[ic:[name]]"
-      createdPublic: '&eCreated new interactive sign'
+      public: ' &2[Publik]'
+      notPublic: ' &7[EjPublik]'
+      reqPerm: ' &2[KrävtTillstånd]'
+      noPerm: ' &7[KrävtTillstånd]'
+      permHover: ' &eKräver tillståndet &7[permission] &eför att placera denna skylt'
+      editSign: ' &e[RedigeraSkyltRader]'
+      publicHover: "&eÄndra publik status. \nSkyltens översta rad &7[ic:[name]]"
+      createdPublic: '&eSkapade ny interaktiv skylt'
       list: '&e[place]. &6[name]'
       listType: ' &e[type]    '
-      editCommands: '&eEdit commands'
-      editBlocks: ' &eEdit blocks'
-      addBlock: '&eAdd block you are looking at'
-      addEntity: ' &eAdd entity you are looking at'
-      manageCommands: '&eSwitch to command editor'
-      manageBlockEnt: '&eSwitch to block/entity editor'
+      editCommands: '&eRedigera kommandon'
+      editBlocks: ' &eRedigera block'
+      addBlock: '&eLägg till blocket du tittar på'
+      addEntity: ' &eLägg till entiteten du tittar på'
+      manageCommands: '&eByt till kommando redigeraren'
+      manageBlockEnt: '&eByt till block/entitet redigeraren'
       locList: '&e[place]. &6[type]   '
       entList: '&e[place]. &6[type]   '
       ListHover:
-      - '&eWorld: &6[world]'
+      - '&eVärld: &6[world]'
       - '&eX:[x] &6Y:[y] &eZ:[z]'
-      notPublicIc: '&cYou cant use this, its not public'
+      notPublicIc: '&cDu kan inte använda detta, det är inte publikt'
       block: (Block)
-      entity: (Entity)
-      both: (Both)
-      none: (None)
-      addedNew: '&eAdded new block/entity for &6[name]'
-      dontExist: '&cInteractive command dont exist by this name'
-      exists: '&cInteractive command with this name already exists'
-      blockExist: '&cThis block is already being used by &e[name]'
-      entityExist: '&cThis entity is already being used by &e[name]'
-      cantUsePlayer: '&cYou cant use regular player as command entity'
-      addInfo: '&eEnter new command. Type &6cancel &eto cancel'
-      addInformationHover: "&eGlobal variables supported as of sender category \n\
-        &eTo include delay in commands: \n&edelay! 5 \n&eAdditional variables can\
-        \ be used to insert variables by their place \n&e$1 will take provided variable\
-        \ by new command and will place in that place \n&e$1- takes all variables\
-        \ from this point and inserts into original commands"
-      editInfo: '&eClick to paste old text. Type &6cancel &eto cancel action. Type
-        &6remove &eto remove line'
+      entity: (Entitet)
+      both: (Båda)
+      none: (Inget)
+      addedNew: '&eLa till nytt block/entitet för &6[name]'
+      dontExist: '&cInteraktivt kommando med det namnet existerar inte'
+      exists: '&cDet finns redan ett interaktivt kommando med detta namn'
+      blockExist: '&cDetta blocket används redan av &e[name]'
+      entityExist: '&cDenna entitet används redan av &e[name]'
+      cantUsePlayer: '&cDu kan inte använda vanliga spelare som kommando entitet'
+      addInfo: '&eAnge nytt kommando. Skriv &6cancel &eför att avbryta'
+      addInformationHover: "&eGlobala variabler stöds som avsändarkategori \n\
+        &eFör att inkludera fördröjning i kommandon: \n&edelay! 5 \n&eYtterligare variabler kan\
+        \ användas för att infoga variabler efter deras plats \n&e$1 tar den tillhandahållna variabeln\
+        \ från det nya kommandot och ersätter den gamla \n&e$1- tar alla variabler\
+        \ från denna punkt och infogar i orginalkommandon"
+      editInfo: '&eKlicka här för att klistra in den gamla texten. Skriv &6cancel &eför att avbryta. Skriv
+        &6remove &eför att ta bort raden'
   ifoffline:
     help:
       info: '&ePerform command only when player is offline'
