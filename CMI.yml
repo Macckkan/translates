@@ -2052,50 +2052,50 @@ command:
         &6remove &eför att ta bort raden'
   ifoffline:
     help:
-      info: '&ePerform command only when player is offline'
+      info: '&eUtför kommandot endast när spelaren är offline'
       args: '[playerName] (command)'
   ifonline:
     help:
-      info: '&ePerform command only when player is online'
+      info: '&eUtför kommandot endast när spelaren är online'
       args: '[playerName] (command)'
   ignore:
     help:
-      info: '&eIgnores player'
+      info: '&eIgnorera spelare'
       args: (playerName/uuid/all)
       explanation:
       - cmi.command.ignore.bypass - to bypass ignore list
     info:
-      self: '&cDon''t be silly, you can''t ignore yourself'
-      added: '&eYou''re now ignoring &6[playerDisplayName]'
-      addedAll: '&eYou''re now ignoring everyone'
-      all: '&eEveryone'
-      removed: '&eYou''re no longer ignoring &6[playerDisplayName]'
-      removedAll: '&eYou''re no longer ignoring everyone'
+      self: '&cDu kan inte ignorera dig själv'
+      added: '&eDu ignorerar nu &6[playerDisplayName]'
+      addedAll: '&eDu ignorerar nu alla'
+      all: '&eAlla'
+      removed: '&eDu slutade ignorera &6[playerDisplayName]'
+      removedAll: '&eDu ignorerar inte alla längre'
       list: '&e[place]. [playerDisplayName]  '
-      ignoringYou: '&c[playerDisplayName] &eis ignoring you'
-      empty: '&7Ignore list is empty'
+      ignoringYou: '&c[playerDisplayName] &eignorerar dig'
+      empty: '&7Listan på ignorerade spelare är tom'
   importfrom:
     help:
-      info: '&eImport data from other plugins'
+      info: '&eImportera data från andra plugins'
       args: '[essentials] [home/warp/nick/logoutlocation/money/mail]'
     info:
-      converted: '&eConverted: &6[done]&e/&6[total] &eusers'
-      convertedWarps: '&eConverted &6[amount] &ewarps'
-      noInfo: '&cYou forgot to provide information what you want to import exactly'
-      savingInProgress: '&eData will be saved into data base in next couple minutes
-        depending on how many entries we need to save'
-      HDfile: '&cCould not find HolographicDisplays plugin database file. Aborting.'
-      HDexist: '&cHologram by &7[name] &cname already exists. Skipping.'
-      HDfailed: '&cCould not load hologram (&7[name]&c)'
-      HDimported: '&eImported &7[amount] &eholograms'
+      converted: '&eKonverterade: &6[done]&e/&6[total] &eanvändare'
+      convertedWarps: '&eKonverterade &6[amount] &ewarps'
+      noInfo: '&cDu glömde ange information om vad du ville importera'
+      savingInProgress: '&eData kommer sparas i databasen inom dom nästa minutrarna
+        beroende på hur många poster vi måste spara'
+      HDfile: '&cKunde inte hitta HolographicDisplays plugin databas filen. Avbryter.'
+      HDexist: '&cHologram med namn &7[name] &cfinns redan. Hoppar över.'
+      HDfailed: '&cKunde inte ladda hologrammet (&7[name]&c)'
+      HDimported: '&eImporterade &7[amount] &ehologram'
   importoldusers:
     help:
-      info: '&eImports users from playerdata folder in main world folder. Server can
-        suffer lag spike during import'
+      info: '&eImporterar användares från playerdata mappen i huvudvärldens mapp. Servern kan
+        lagga under tiden'
       args: ''
     info:
-      starting: '&eStarting import'
-      feedback: '&eImported &6[amount] &enew users'
+      starting: '&eStartar importering'
+      feedback: '&eImporterade &6[amount] &enya användare'
   info:
     help:
       info: '&eVisa spelares information'
@@ -2103,10 +2103,10 @@ command:
     info:
       feedback:
         uuid: '&eKopiera uuid till chatten'
-        ouuid: '&eShift + left click to paste online uuid into chat box'
+        ouuid: '&eShift + vänsterklick för att kopiera online uuid i chatten'
       newName: '&6[playerName]'
       newBalance: '&7(&e[balance]&7) '
-      newDisplayName: '&7Display name: &r[playerDisplayName]'
+      newDisplayName: '&7Visningsnamn: &r[playerDisplayName]'
       newNameHover:
       - '[playerDisplayName]'
       - '[nick]'
@@ -2120,14 +2120,14 @@ command:
       - '[ping]'
       - '[firstLogin]'
       newNameHoverNick: '&7Nick: &f[nick]'
-      newNameHoverGroup: '&7Group: &f[group]'
-      newNameHoverKnownAs: '&7Also known as: &f[nameList]'
+      newNameHoverGroup: '&7Grupp: &f[group]'
+      newNameHoverKnownAs: '&7Även känd som: &f[nameList]'
       newNameHoverIp: '&7Ip: &f[ip]'
       newNameHoverPing: '&7Ping: &f[ping]'
       newNameHoverCountry: ' &7[country] &f(&2[countryCode]&f)'
-      newFirstLogin: '&7First login: &6[firstLogin]'
-      newPlaytime: '&7PlayTime: &6[time]'
-      newOnline: '[state] for: &6[logoff]'
+      newFirstLogin: '&7Första inloggning: &6[firstLogin]'
+      newPlaytime: '&7Speltid: &6[time]'
+      newOnline: '[state] i: &6[logoff]'
       newOnlineStateOn: '&2Online'
       newOnlineStateOff: '&7Offline'
       newUUID: '&fUUID '
@@ -2136,18 +2136,18 @@ command:
       newTurnedOnColor: '&a'
       newTurnedOffColor: '&7'
       newOp: 'OP '
-      newGod: 'God '
-      newFly: 'CanFly&6([flying]&6) '
-      newFlying: Flying
-      newFlyHover: '&7Fly speed: &6[flyspeed]'
-      newFlyTemp: '&7Temporary fly: &6[time]'
-      newFlyCharge: '&7Flight charge: &6[charge]'
-      newElytraFlyHover: '&7Flying with elytra'
-      newGodHover: '&7TempGod for: &e[time]'
-      newSneaking: Sneaking
-      newSprint: Sprinting
-      newWalkSpeed: '&7Walk speed: &6[walkspeed]'
-      newGameMode: '&fMode: &6[gameMode] '
+      newGod: 'Gud '
+      newFly: 'KanFlyga&6([flying]&6) '
+      newFlying: Flyger
+      newFlyHover: '&7Flyghastighet: &6[flyspeed]'
+      newFlyTemp: '&7Tillfällig fly: &6[time]'
+      newFlyCharge: '&7Flygladdning: &6[charge]'
+      newElytraFlyHover: '&7Flyger med elytra'
+      newGodHover: '&7TempGud i: &e[time]'
+      newSneaking: Smyger
+      newSprint: Springer
+      newWalkSpeed: '&7Gång hastighet: &6[walkspeed]'
+      newGameMode: '&fLäge: &6[gameMode] '
       newGameModeHover:
       - '[sprint]'
       - '[sneaking]'
@@ -2157,55 +2157,55 @@ command:
       - '[saturation]'
       - '[exp]'
       newHp: '&7HP: &6[hp]&e/&6[maxhp]'
-      newAir: '&7Air: &6[leftAir]&e/&6[totalAir]'
+      newAir: '&7Luft: &6[leftAir]&e/&6[totalAir]'
       newHunger: '&7Hunger: &6[food]&e/&620'
-      newSaturation: '&7Saturation +&6[saturation]&e'
+      newSaturation: '&7Mättnad +&6[saturation]&e'
       newExp: '&7Exp: &6[totalexp]&7exp -> &6[currentexp]&e/&6[needexp] &e(&6[level]&7lvl&e)'
       newPos: '&fPos '
       newPosHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newAfk: 'AFK '
-      newAfkHover: '&6Afk for last: [time]'
-      newBed: '&fBed '
+      newAfkHover: '&6Afk de senaste: [time]'
+      newBed: '&fSäng '
       newBedHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
-      newDeath: '&fDeath '
+      newDeath: '&fGravplats '
       newDeathHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
-      newBack: '&fBack '
+      newBack: '&fTillbaka '
       newBackHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
-      newRespawn: '&fRespawn '
+      newRespawn: '&fÅteruppståndsplats '
       newRespawnHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newSee: '◕‿◕ '
-      newSeeHover: '&6Can see you'
-      newSeeHoverNot: '&2Can''t see you'
-      newBanned: 'Banned '
+      newSeeHover: '&6Kan se dig'
+      newSeeHoverNot: '&2Kan inte se dig'
+      newBanned: 'Avstängd '
       newBannedHover:
-      - '&7Banned by: &e[name]'
-      - '&7Left: &e[left]'
-      - '&7For: &e[reason]'
-      newMuted: 'Muted '
+      - '&7Avstängd av: &e[name]'
+      - '&7Kvar: &e[left]'
+      - '&7Anledning: &e[reason]'
+      newMuted: 'Tystad '
       newMutedHover:
-      - '&7Left: &e[left]'
-      - '&7For: &e[reason]'
-      newShadowMutedHover: '&4Shadow mute'
-      newCuffed: 'Cuffed '
-      newJailed: 'Jailed '
+      - '&7Kvar: &e[left]'
+      - '&7Anledning: &e[reason]'
+      newShadowMutedHover: '&4Tyst tystning'
+      newCuffed: 'Handfängslad '
+      newJailed: 'Fängslad '
       newJailedHover:
-      - '&7Jail: &e[jail]'
+      - '&7Fängelse: &e[jail]'
       - '&7Cell: &e[id]'
-      - '&7Left: &e[time]'
-      - '&7Reason: &e[reason]'
-      newHomes: '&fHomes: &e[count] '
-      newMail: '&fMail: &e[count] '
-      newWarnings: '&fWarnings: &e[count] '
-      newAlert: 'Alert '
+      - '&7Kvar: &e[time]'
+      - '&7Anledning: &e[reason]'
+      newHomes: '&fHem: &e[count] '
+      newMail: '&fBrev: &e[count] '
+      newWarnings: '&fVarningar: &e[count] '
+      newAlert: 'Larm '
       newAlertHover:
-      - '&7Left: &e[left]'
-      - '&7For: &e[reason]'
-      newChatRoom: 'ChatRoom '
+      - '&7Kvar: &e[left]'
+      - '&7Anledning: &e[reason]'
+      newChatRoom: 'ChattRum '
       newChatRoomHover:
-      - '&7ChatRoom: &e[name]'
-      - '&7Users in: &e[count]'
+      - '&7ChattRum: &e[name]'
+      - '&7Användare i: &e[count]'
       nList:
-      - '&e------------- [enableColor]Enabled [disableColor]Disabled&e -------------'
+      - '&e------------- [enableColor]Aktiverad [disableColor]Avstängd&e -------------'
       - '&e| [name][balance][UUID][ip]'
       - '&e| [OP][god][fly][gameMode][afk][see]'
       - '&e| [banned][muted][cuffed][jailed][alert][chatroom]'
@@ -2214,57 +2214,57 @@ command:
       - '&e-----------------------------------------'
   inv:
     help:
-      info: '&eOpens players inventory'
+      info: '&eÖppna en spelares förråd'
       args: '[playerName]'
       explanation:
-      - cmi.command.inv.preventmodify - prevents inventory editing
-      - cmi.invedit - allows to edit inventory
-      - cmi.command.inv.location - shows players location
+      - cmi.command.inv.preventmodify - hindra redigering av förråd
+      - cmi.invedit - tillåt att redigera förråd
+      - cmi.command.inv.location - visa spelarens plats
     info:
-      feedback: '&eYou are editing &3[playerDisplayName] &einventory (&3[offon]&e).'
+      feedback: '&eDu redigerar nu &3[playerDisplayName] &eförråd (&3[offon]&e).'
   invcheck:
     help:
-      info: '&eOpen saved inventory in preview mode'
+      info: '&eÖppna sparat förråd i visningsläge'
       args: (playerName) [id] (-e) (last)
   invlist:
     help:
-      info: '&eShow saved inventories list'
+      info: '&eVisa lista på sparade förråd'
       args: (playerName)
   invload:
     help:
-      info: '&eLoad saved inventory'
+      info: '&eLadda sparat förråd'
       args: (sourceName) (targetName) [id/last]
   invremove:
     help:
-      info: '&eRemove saved inventories for player'
+      info: '&eTa bort sparat förråd'
       args: (playerName) [id/all/last]
   invremoveall:
     help:
-      info: '&eRemoves all saved inventories'
+      info: '&eTa bort alla sparade förråd'
       args: '[confirmed]'
     info:
       removed: '&eAlla ([count]) sparade förråd togs bort'
   invsave:
     help:
-      info: '&eSave inventory'
+      info: '&eSpara förråd'
       args: (playerName) (id) (-s)
   ipban:
     help:
-      info: '&eBanna ip'
+      info: '&eStäng av ip'
       args: '[ip/playerName] (reason) (-s)'
       explanation:
       - cmi.command.banip.bypass - to bypass ban
     info:
-      message: '&cDu är IP-bannad från denna server!'
+      message: '&cDu är IP-avstängd från denna server!'
       reason: '&6Anledning: &e[reason]'
       defaultReason: '&eBröt mot serverns regler!'
-      messageToAll: '&6[playerDisplayName] &eblev ip-bannad av &6[senderDisplayName]
+      messageToAll: '&6[playerDisplayName] &eblev ip-avstängd av &6[senderDisplayName]
         &eför: &6[reason]'
-      banedSilent: '&7[&8Silent&7]&6[playerDisplayName] &eblev ip-bannad av &6[senderDisplayName]
+      banedSilent: '&7[&8Silent&7]&6[playerDisplayName] &eblev ip-avstängd av &6[senderDisplayName]
         &eför: &6[reason]'
   ipbanlist:
     help:
-      info: '&eBan ip list'
+      info: '&eLista på ip-avstängningar'
       args: ''
     info:
       list: '&e[place]. &7[ip] &e- &6[reason]  '
@@ -2275,11 +2275,11 @@ command:
         &f[list]
   item:
     help:
-      info: '&eGive item to yourself'
+      info: '&eGe dig själv föremål'
       args: '[itemname] (amount)'
       explanation:
-      - Name and lore supports placeholders
-      - 'Example: /give stone'
+      - Namn och lore stödjer placeholders
+      - 'Exempel: /give stone'
       - /give stone 5 n Stonehenge
       - /give stick e knockback:1
       - /give sponge l Got_item_on:_%date/YY/MM/dd-HH:mm:ss%
@@ -2291,61 +2291,61 @@ command:
       - /give minecraft:diamond_helmet 1 0 {ench:[{id:0,lvl:100},{id:2,lvl:100},{id:34,lvl:100}]}
   itemframe:
     help:
-      info: '&eManage item frames'
+      info: '&eHantera föremålsramar'
       args: (invisible/fixed/invulnerable)
     info:
-      enabled: Enabled
-      disabled: Disabled
-      feedback: '&e[count] &6item frames are invisible around you'
+      enabled: Aktiverad
+      disabled: Avaktiverad
+      feedback: '&e[count] &6föremålsramar är osynliga runt dig'
   iteminfo:
     help:
-      info: '&eShow item information'
+      info: '&eVisa föremåls information'
       args: (playerName)
     info:
-      nameMat: ' &eName: &7[name] &eMaterial: &7[material]'
-      mojangHover: '&eMojang Name: &7[name]'
-      display: ' &eDisplay Name: &7[display]'
+      nameMat: ' &eNamn: &7[name] &eMaterial: &7[material]'
+      mojangHover: '&eMojang Namn: &7[name]'
+      display: ' &eVisnings Namn: &7[display]'
       lore: ' &eLore:'
       loreLine: '   &5[loreLine]'
-      enchants: ' &eEnchants: &7[enchants]'
-      entityType: ' &eEntity Type: &6[type]'
-      durability: ' &eDurability: &6[current]&e/&6[max]'
+      enchants: ' &eFörtrollningar: &7[enchants]'
+      entityType: ' &eEntitets typ: &6[type]'
+      durability: ' &eHållbarhet: &6[current]&e/&6[max]'
   itemlore:
     help:
-      info: '&eChange items lore'
+      info: '&eÄndra föremåls lore'
       args: (-p:[playerName]) [linenumber] [remove/insert/ new lore line]
     info:
-      feedback: '&eYou have changed lore line to ''&r&5[loreLine]&e'' for &3[playerDisplayName]&e
+      feedback: '&eDu har ändrat lore rad till ''&r&5[loreLine]&e'' för &3[playerDisplayName]&e
         (&3[offon]&e).'
-      noitem: '&cNot holding any item in hand.'
-      removed: '&eItem lore line &6[line] &ewas removed for &3[playerDisplayName]&e
+      noitem: '&cDu har inget föremål i handen.'
+      removed: '&eFöremålets lore rad &6[line] &etogs bort för &3[playerDisplayName]&e
         (&3[offon]&e).'
-      inserted: '&eItem lore line &6[line] &ewas inserted for &3[playerDisplayName]&e
+      inserted: '&eFöremålets lore rad &6[line] &eblev tillagd för &3[playerDisplayName]&e
         (&3[offon]&e).'
-      maxLines: '&eThere is only &6[lines] &elines of lore.'
-      blocked: '&eThis item is blocked from re-loring.'
+      maxLines: '&eDet finns endast &6[lines] &erader för lore.'
+      blocked: '&eDetta föremålet är blockerat från åter-loring.'
   itemname:
     help:
-      info: '&eRename items'
+      info: '&eDöp om föremål'
       args: (-p:[playerName]) [remove/your new item name]
     info:
-      feedback: '&eYou have renamed item to [itemname]&e for &3[playerDisplayName]&e
+      feedback: '&eDu har döpt om föremålet till [itemname]&e för &3[playerDisplayName]&e
         (&3[offon]&e).'
-      noitem: '&cNot holding any item in hand.'
-      removed: '&eItem name was removed for &3[playerDisplayName]&e (&3[offon]&e).'
-      blocked: '&eThis item is blocked from renaming'
+      noitem: '&cHåller inte i något föremål.'
+      removed: '&eFöremålets namn togs bort för &3[playerDisplayName]&e (&3[offon]&e).'
+      blocked: '&eDet går inte att byta namn på detta föremål'
   itemnbt:
     help:
-      info: '&eShow item NBT information'
+      info: '&eVisa föremålets NBT information'
       args: (playerName)
     info:
       step: ' &6->: &6[name]'
       final: '&e[value]'
       list: '&e- &r[value]'
-      noNbt: '&eItem does not contain any NBT data'
+      noNbt: '&eFöremålet innehåller inga NBT data'
   jail:
     help:
-      info: '&eJail player for time period'
+      info: '&eFängsla en spelare i en viss tid'
       args: '[playerName] (time) (jailName) (cellId) (-s) (r:jail_reason)'
     info:
       jailed: '&eDu satte &6[playerDisplayName] &ei fängelse i kommande [time]'
@@ -2354,28 +2354,28 @@ command:
       leftTime: '!title!&7Fängelsetid:!subtitle![time]'
       jailedTarget: '&eDu har blivit fängslad! [time]'
       cantTalk: '&cDu kan inte prata när du är fängslad'
-      cantTalkRange: '!actionbar!&fDin chatt distans är begränsad till &c[range] &fblock'
+      cantTalkRange: '!actionbar!&fDin chattdistans är begränsad till &c[range] &fblock'
       failed: '&cKund einte fängsla spelaren. Kolla fängelsets namn, cellens id och
         tids format'
       bossbar: '&7Fängelsetid: [autoTimeLeft]'
       noCommand: '&cDu kan inte använda detta kommando när du är fängslad!'
   jailedit:
     help:
-      info: '&eEdit jails'
+      info: '&eRedigera fängelse'
       args: ''
     info:
-      notInArea: '&cYou are not standing in jail area'
-      noName: '&cNo jail by this name'
-      noCell: '&cNo cell by this id'
-      exist: '&cJail with this name already exist'
-      createdJail: '&eSuccessfully created new jail (&6[jail]&e)'
-      createdCell: '&eSuccessfully created new jail cell (&6[jail]&e:&6[cellId]&e)'
-      collides: '&cCollides with &6[jailName] &ejail'
-      jailList: '&e[place]. &6[jail] &eCells:&6[cells] &eJailed: &6[amount]    '
-      editCells: '&eEdit cell list'
-      cellList: '&eCell id:&6[id] &ejailed: &6[amount]    '
+      notInArea: '&cDu befinner dig inte i ett fängelseområde'
+      noName: '&cDet finns inget fängelse med det namnet'
+      noCell: '&cDet finns ingen cell med detta id'
+      exist: '&cEtt fängelse med detta namn finns redan'
+      createdJail: '&eNytt fängelse skapades (&6[jail]&e)'
+      createdCell: '&eNy fängelsecell skapades (&6[jail]&e:&6[cellId]&e)'
+      collides: '&cKrockar med &6[jailName] &efängelset'
+      jailList: '&e[place]. &6[jail] &eCeller:&6[cells] &eFängslade: &6[amount]    '
+      editCells: '&eRedigera listan över celler'
+      cellList: '&eCell id:&6[id] &eFängslade: &6[amount]    '
       jailListTp: ' &7[tp] '
-      jailListTpHover: '&eSet outside teleport location'
+      jailListTpHover: '&eAnge besöks teleporterings plats'
       jailListArea: ' &7[area] '
       jailListAreaHover: '&eRedefine area'
       jailRemoved: '&eRemoved (&6[jail]&e) jail'
